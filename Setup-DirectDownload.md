@@ -1,4 +1,3 @@
-# Setup DirectDownload
 DirectDownload provides an easy way to downloads files from the device running aria2 directly to your device.
 
 ## Server-side setup
