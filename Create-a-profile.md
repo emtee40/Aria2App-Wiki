@@ -1,5 +1,3 @@
-# Create a profile
-
 ## Connectivity conditions
 Aria2App is able to choose which connection parameters to use based on the actual connectivity condition. Every profile can be set up with addresses for each connectivity condition or one to use always. If the profile has more than one condition, one must be specified as default in case none of the other conditions matches the situation. 
 
