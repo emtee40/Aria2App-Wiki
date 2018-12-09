@@ -1,6 +1,3 @@
-Privacy Policy
-==============
-
 Effective date: September 20, 2018
 
 Aria2App ("us", "we", or "our") operates the website and the Aria2App mobile application (the "Service").
