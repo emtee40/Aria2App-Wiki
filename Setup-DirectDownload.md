@@ -1,7 +1,13 @@
 DirectDownload provides an easy way to downloads files from the device running aria2 directly to your device.
 
-## Server-side setup
+This guide will discuss two ways to do this:
+* [with Python](#with-python)
+* [with Apache](#with-apache)
+
+# Server-side setup
 In order to make DirectDownload work we need to setup a service that provides direct access to the files that are being downloaded by aria2. Below is explained one of the many ways to do it. For this method you need Python installed. 
+
+## With Python
 
 ### Python installation
 - **Linux**: Python on Linux can be installed with apt: `sudo apt-get install python` or `sudo apt-get install python3`. If your system doesn't have apt you can use any other package manager, they should all provide python. 
@@ -35,7 +41,35 @@ Once you downloaded the file execute it with the python like so: `python ./serve
 
 >**Note**: if you're going to connect to the server from an external network, you need to open the desired port on you router.
 
-## Aria2App setup
+## With Apache
+
+### Installing Apache
+- **Linux**: do `sudo apt-get install apache2` from the terminal
+- **Windows**: [download from here](https://httpd.apache.org/docs/2.4/platform/windows.html)
+
+## Configuration
+The setup is pretty simple:
+- Create a configuration file inside the `sites-enabled` folder (`/etc/apache2/sites-enabled` on Linux) named something you can relate to `aria2`, the filename should end with `.conf`.
+- Inside this file copy the following text, editing it as mentioned below:
+```
+<VirtualHost *:[PORT]>
+        DocumentRoot [DIR]
+        <Directory [DIR]>
+                Options +Indexes
+                Order allow,deny
+                Allow from all
+                Require all granted
+                DirectoryIndex disabled
+        </Directory>
+</VirtualHost>
+```
+> Replace `[PORT]` with the desired port number (avoid small numbers, but less than 65536) and `[DIR]` with the full path to your downloads folder.
+- Restart Apache: ` sudo systemctl restart apache2` or the equivalent for your system.
+
+> **Note**: if you encounter permission problems (403) check your folder permissions, you main need to `chown -R www-data:www-data [DIR]` or `chmod -R o+r [DIR]`.
+
+
+# Aria2App setup
 Once your script is running, you need to gather the IP address of the machine. When you have it you can type in the address field of DirectDownload in Aria2App the full address pointing to the directory listing. Remember that any path added to the end of the address will be ignored.
 
 >**Example**: If the address is 192.168.1.8 and the port is 801, then the full address is http://192.168.1.8:801/.
