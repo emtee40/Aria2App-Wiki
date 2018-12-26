@@ -71,12 +71,12 @@ The setup is pretty simple:
 </VirtualHost>
 ```
 > Replace `[PORT]` with the desired port number (avoid small numbers, but less than 65536) and `[DIR]` with the full path to your downloads folder.
-- Restart Apache: ` sudo systemctl restart apache2` or the equivalent for your system.
+- Restart Apache: `sudo systemctl restart apache2` or the equivalent for your system.
 
 > **Note**: if you encounter permission problems (403) check your folder permissions, you main need to `chown -R www-data:www-data [DIR]` or `chmod -R o+r [DIR]`.
 
 ## Authentication
-To enabled authentication you can follow [this guide](https://wiki.apache.org/httpd/PasswordBasicAuth) from the Apache website.
+To enable authentication you can follow [this guide](https://wiki.apache.org/httpd/PasswordBasicAuth) from the Apache website.
 
 
 # Aria2App setup
