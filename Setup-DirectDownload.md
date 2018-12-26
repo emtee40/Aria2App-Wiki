@@ -75,6 +75,9 @@ The setup is pretty simple:
 
 > **Note**: if you encounter permission problems (403) check your folder permissions, you main need to `chown -R www-data:www-data [DIR]` or `chmod -R o+r [DIR]`.
 
+## Authentication
+To enabled authentication you can follow [this guide](https://wiki.apache.org/httpd/PasswordBasicAuth) from the Apache website.
+
 
 # Aria2App setup
 Once your script is running, you need to gather the IP address of the machine. When you have it you can type in the address field of DirectDownload in Aria2App the full address pointing to the directory listing.
