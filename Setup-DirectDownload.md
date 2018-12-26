@@ -41,6 +41,13 @@ Once you downloaded the file execute it with the python like so: `python ./serve
 
 >**Note**: if you're going to connect to the server from an external network, you need to open the desired port on you router.
 
+### Authentication
+You can also set an username and password to access the files, that can be done by editing line 247-248 like so:
+```
+USERNAME = "username123"
+PASSWORD = "password456"
+```
+
 ## With Apache
 
 ### Installing Apache
@@ -70,10 +77,8 @@ The setup is pretty simple:
 
 
 # Aria2App setup
-Once your script is running, you need to gather the IP address of the machine. When you have it you can type in the address field of DirectDownload in Aria2App the full address pointing to the directory listing. Remember that any path added to the end of the address will be ignored.
+Once your script is running, you need to gather the IP address of the machine. When you have it you can type in the address field of DirectDownload in Aria2App the full address pointing to the directory listing.
 
 >**Example**: If the address is 192.168.1.8 and the port is 801, then the full address is http://192.168.1.8:801/.
 
 >**Note**: HTTPS is also supported.
-
-You can also specify to use basic authentication, which is not provided by this script.
