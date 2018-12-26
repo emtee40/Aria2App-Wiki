@@ -59,6 +59,7 @@ The setup is pretty simple:
 - Create a configuration file inside the `sites-enabled` folder (`/etc/apache2/sites-enabled` on Linux) named something you can relate to `aria2`, the filename should end with `.conf`.
 - Inside this file copy the following text, editing it as mentioned below:
 ```
+Listen [PORT]
 <VirtualHost *:[PORT]>
         DocumentRoot [DIR]
         <Directory [DIR]>
