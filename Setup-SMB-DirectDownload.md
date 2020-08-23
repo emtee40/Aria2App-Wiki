@@ -1,0 +1,1 @@
+DirectDownload allows to download files from a Samba share.
