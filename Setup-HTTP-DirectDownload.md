@@ -81,7 +81,7 @@ To enable authentication you can follow [this guide](https://wiki.apache.org/htt
 
 
 # Aria2App setup
-Once your script is running, you need to gather the IP address of the machine. When you have it you can type in the address field of DirectDownload in Aria2App the full address pointing to the directory listing.
+Once your script is running, you need to gather the IP address of the machine. When you have it you can select the `WEB` mode and type in the address field the full address pointing to the directory listing.
 
 >**Example**: If the address is 192.168.1.8 and the port is 801, then the full address is http://192.168.1.8:801/.
 
