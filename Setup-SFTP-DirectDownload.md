@@ -2,7 +2,7 @@ DirectDownload allows to download files from a SFTP (SSH) server.
 
 # Server-side setup
 
-Install an SSH server (`openssh` probably) and configure it (there are plenty tutorials only).
+Install an SSH server (`openssh` probably) and configure it (there are plenty tutorials online).
 
 # Client-side setup
 
